@@ -6,14 +6,14 @@
  * Time: 16:32
  */
 return [
-    'object-storage' => [
+    'apigility-object-storage' => [
         'adapter'=>[
             'aliyun'=>[
-                'bucket' => 'eebow-family',
-                'domain-outer'=>'eebow-family.oss-cn-shanghai.aliyuncs.com',
-                'domain-inner'=>'eebow-family.oss-cn-shanghai-internal.aliyuncs.com',
-                'access-key'=>'LTAI1LZKindjYykt',
-                'access-secret'=>'hFuzwrELSFxXCHoO8Uy83tkEDfDlzB',
+                'bucket' => '',
+                'domain-outer'=>'',
+                'domain-inner'=>'',
+                'access-key'=>'',
+                'access-secret'=>'',
                 'scheme'=>'http'
             ]
         ]

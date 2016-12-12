@@ -20,8 +20,8 @@ class ObjectStorageService
     public function __construct(ServiceManager $services)
     {
         $config = $services->get('config');
-        if (isset($config['object-storage'])) {
-            $config = $config['object-storage'];
+        if (isset($config['apigility-object-storage'])) {
+            $config = $config['apigility-object-storage'];
 
             if (isset($config['adapter']['aliyun'])) $this->adapter = new Aliyun($config['adapter']['aliyun']);
             else throw new \Exception('没有配置Object Storage Adapter', 500);
