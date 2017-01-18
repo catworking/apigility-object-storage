@@ -57,6 +57,7 @@ return [
                 0 => 'application/vnd.apigility-object-storage.v1+json',
                 1 => 'application/json',
                 2 => 'multipart/form-data',
+                3 => 'multipart/mixed',
             ],
         ],
     ],
