@@ -8,7 +8,8 @@
 return [
     'service_manager' => array(
         'factories' => array(
-            'ApigilityObjectStorage\Service\ObjectStorageService' => 'ApigilityObjectStorage\Service\ObjectStorageServiceFactory'
+            'ApigilityObjectStorage\Service\ObjectStorageService' => 'ApigilityObjectStorage\Service\ObjectStorageServiceFactory',
+            'ApigilityObjectStorage\Service\FileService' => 'ApigilityObjectStorage\Service\FileServiceFactory'
         ),
     )
 ];

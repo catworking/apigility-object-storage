@@ -23,7 +23,7 @@ class ObjectStorageService
         if (isset($config['apigility-object-storage'])) {
             $config = $config['apigility-object-storage'];
 
-            if (isset($config['adapter']['aliyun'])) $this->adapter = new Aliyun($config['adapter']['aliyun']);
+            if ($config['adapter']['aliyun']['enable']) $this->adapter = new Aliyun($config['adapter']['aliyun']['params']);
             else throw new \Exception('没有配置Object Storage Adapter', 500);
         }
     }
@@ -35,5 +35,17 @@ class ObjectStorageService
     public function renderUriToUrl($uri)
     {
         return $this->adapter->renderUriToUrl($uri);
+    }
+
+    /**
+     * 上传一个文件并返回已保存的相对路径
+     *
+     * @param $file_path
+     * @param $remote_dir_path
+     * @return string
+     */
+    public function uploadFile($file_path, $remote_dir_path)
+    {
+        return $this->adapter->uploadFile($file_path, $remote_dir_path);
     }
 }

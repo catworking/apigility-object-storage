@@ -9,12 +9,16 @@ return [
     'apigility-object-storage' => [
         'adapter'=>[
             'aliyun'=>[
-                'bucket' => '',
-                'domain-outer'=>'',
-                'domain-inner'=>'',
-                'access-key'=>'',
-                'access-secret'=>'',
-                'scheme'=>'http'
+                'enable' => false,
+                'params' => [
+                    'bucket' => '',
+                    'domain-outer'=>'',
+                    'domain-inner'=>'',
+                    'access-key'=>'',
+                    'access-secret'=>'',
+                    'endpoint'=>'',
+                    'scheme'=>'http'
+                ],
             ]
         ]
     ]
