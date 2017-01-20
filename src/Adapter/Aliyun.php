@@ -21,7 +21,10 @@ class Aliyun implements AdapterInterface
 
     public function renderUriToUrl($uri)
     {
-        return $this->config['scheme'].'://'.$this->config['domain-outer'].'/'.$uri;
+        $url = null;
+        if (empty($this->config['scheme'])) $url = '//'.$this->config['domain-outer'].'/'.$uri;
+        else $url = $this->config['scheme'].'://'.$this->config['domain-outer'].'/'.$uri;
+        return $url;
     }
 
     /**

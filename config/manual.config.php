@@ -17,7 +17,7 @@ return [
                     'access-key'=>'',
                     'access-secret'=>'',
                     'endpoint'=>'',
-                    'scheme'=>'http'
+                    'scheme'=>''
                 ],
             ]
         ]
